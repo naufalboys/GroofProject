@@ -1,18 +1,6 @@
 /*
  * Groof Project using IoT Discovery Kit
  */
- 
-#include <SPI.h>
-#include <WiFiST.h>
-#include <PubSubClient.h>
-
-SPIClass SPI_3(PC12, PC11, PC10);
-WiFiClass WiFi(&SPI_3, PE0, PE1, PE8, PB13);
-
-//SSID + Password WiFi
-char ssid[] = "INNOVATIONLABS";         
-char pass[] = "sebatdulu";  
-int status = WL_IDLE_STATUS;     
 
 //Analog Pin 
 #define pH  = A0
