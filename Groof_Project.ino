@@ -15,19 +15,19 @@ char pass[] = "sebatdulu";
 int status = WL_IDLE_STATUS;     
 
 //Analog Pin 
-int pH  = 0;
-int TDS = 1;
+#define pH  = A0
+#define TDS = A1
 
 //Digital Pin
-int Tandon          = 0;
-int Penampungan     = 1;
-int RelaySumur      = 2;
-int RelayDistribusi = 3;
-int RelayPenampungan= 4;
-int RelayAsam       = 5;
-int RelayBasa       = 6;
-int RelayA          = 7;
-int RelayB          = 8;
+#define Tandon          = 0;
+#define Penampungan     = 1;
+#define RelaySumur      = 2;
+#define RelayDistribusi = 3;
+#define RelayPenampungan= 4;
+#define RelayAsam       = 5;
+#define RelayBasa       = 6;
+#define RelayA          = 7;
+#define RelayB          = 8;
 
 //Value
 int Nilai_Tandon      = 0;
