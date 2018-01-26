@@ -33,7 +33,6 @@ int RelayB          = 8;
 int Nilai_Tandon      = 0;
 int Nilai_Penampungan = 0;
 
-
 void setup() 
 {
   Serial.begin(9600);
@@ -63,12 +62,12 @@ void pompa()
   Nilai_Tandon = digitalRead(Tandon);
   Nilai_Penampungan = digitalRead(Penampungan);
 
-  if(Nilai_Tandon == HIGH)
+  if (Nilai_Tandon == HIGH)
   {
     digitalWrite(RelaySumur, HIGH);
   }
 
-  else
+  else if (Nilai_Tandon == LOW)
   {
     digitalWrite(RelaySumur, LOW);
   }
@@ -78,10 +77,12 @@ void pompa()
     digitalWrite(RelayPenampungan, HIGH);
   }
 
-  else
+  else if(Nilai_Penampungan == LOW)
   {
     digitalWrite(RelayPenampungan, LOW);
   }
+
+  digitalWrite(RelayDistribusi, HIGH);
 }
 
 void loop() 
