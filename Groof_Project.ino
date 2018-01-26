@@ -32,6 +32,8 @@ int status = WL_IDLE_STATUS;
 //Value
 int Nilai_Tandon      = 0;
 int Nilai_Penampungan = 0;
+int Nilai_pH  = 0;
+int Nilai_TDS = 0;
 
 void setup() 
 {
@@ -49,12 +51,14 @@ void setup()
 
 void baca_pH()
 {
-  
+  Nilai_pH = analogRead(pH);
+  //Terus laopo gak ero wkwkwk
 }
 
 void baca_TDS()
 {
-  
+  Nilai_TDS = analogRead(TDS);
+  //Iki yo lapo gak ero wkwkwk
 }
 
 void pompa()
@@ -85,8 +89,12 @@ void pompa()
   digitalWrite(RelayDistribusi, HIGH);
 }
 
-void loop() 
+void peristaltik()
 {
   
+}
 
+void loop() 
+{
+  pompa();
 }
