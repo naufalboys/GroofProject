@@ -13,8 +13,8 @@ SPIClass SPI_3(PC12, PC11, PC10);
 WiFiClass WiFi(&SPI_3, PE0, PE1, PE8, PB13);
 
 //SSID + Password WiFi
-char ssid[] = "INNOVATIONLABS";         
-char pass[] = "sebatdulu";  
+char ssid[] = "SSID";         
+char pass[] = "Password";  
 int status = WL_IDLE_STATUS;    
 const char* mqtt_server = "broker.hivemq.com";
 
